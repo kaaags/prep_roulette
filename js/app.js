@@ -23,35 +23,41 @@ function createDiv(){
 		div.appendChild(node);
 		var element = document.getElementById('appendHere');
 		element.appendChild(div).setAttribute('class', 'zero');
+		rndm();
 	}else if(storedNumber%2===1){
 		var div1 = document.createElement('div');
 		var node1 = document.createTextNode(storedNumber);
 		div1.appendChild(node1);
 		var element1 = document.getElementById('appendHere');
 		element1.appendChild(div1).setAttribute('class', 'odd');
+		rndm();
 	}else if(storedNumber%2===0){
 		var div2 = document.createElement('div');
 		var node2 = document.createTextNode(storedNumber);
 		div2.appendChild(node2);
 		var element2 = document.getElementById('appendHere');
 		element2.appendChild(div2).setAttribute('class', 'even');
-	}
-}
-
-var white = 
-
-startStop = 0;
-function start(){
-	startStop += .5;
-	console.log(startStop);
-	if(startStop%2===1){
-		createDiv();
 		rndm();
 	}
 }
 
+var ignition = false;
 
+function startStop(){
+	setInterval(createDiv(), 5000);
+}
 
+function startSwitch(){
+	if(ignition === false){
+		ignition = true;
+		console.log('Start Status:', ignition);
+		startStop();
+	}else{
+		ignition = false;
+		console.log('Start Status:', ignition);
+		clearInterval();
+	}
+}
 
 // Bonus
 // 1) Add some additional styling to your application.
