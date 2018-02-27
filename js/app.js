@@ -9,6 +9,50 @@ For the number 0, give it a background color of green and a font color of white.
 
 A random number will be generated every 5 seconds.*/
 
+var rndmNmbr = 0;
+
+function rndm(){
+	rndmNmbr = Math.floor(Math.random()*36);
+}
+
+function createDiv(){
+	var storedNumber = rndmNmbr;
+	if(storedNumber===0){
+		var div = document.createElement('div');
+		var node = document.createTextNode(storedNumber);
+		div.appendChild(node);
+		var element = document.getElementById('appendHere');
+		element.appendChild(div).setAttribute('class', 'zero');
+	}else if(storedNumber%2===1){
+		var div1 = document.createElement('div');
+		var node1 = document.createTextNode(storedNumber);
+		div1.appendChild(node1);
+		var element1 = document.getElementById('appendHere');
+		element1.appendChild(div1).setAttribute('class', 'odd');
+	}else if(storedNumber%2===0){
+		var div2 = document.createElement('div');
+		var node2 = document.createTextNode(storedNumber);
+		div2.appendChild(node2);
+		var element2 = document.getElementById('appendHere');
+		element2.appendChild(div2).setAttribute('class', 'even');
+	}
+}
+
+var white = 
+
+startStop = 0;
+function start(){
+	startStop += .5;
+	console.log(startStop);
+	if(startStop%2===1){
+		createDiv();
+		rndm();
+	}
+}
+
+
+
+
 // Bonus
 // 1) Add some additional styling to your application.
 // 2) Create on and off buttons that will start and stop your application.
