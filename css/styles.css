@@ -60,7 +60,7 @@ input:checked + .slider:before {
 div.zero {
 	background-color: green;
 	color: white;
-	border: 3px solid  black;
+	border: 3px solid  grey;
 	margin-bottom: 5px;
 	width: 60px;
 	height: 34px;
@@ -70,7 +70,7 @@ div.zero {
 div.odd {
 	background-color: red;
 	color: white;
-	border: 3px solid  black;
+	border: 3px solid  grey;
 	margin-bottom: 5px;
 	width: 60px;
 	height: 34px;
@@ -80,7 +80,7 @@ div.odd {
 div.even {
 	background-color: black;
 	color: white;
-	border: 3px solid  black;
+	border: 3px solid  grey;
 	margin-bottom: 5px;
 	width: 60px;
 	height: 34px;
