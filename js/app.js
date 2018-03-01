@@ -12,7 +12,7 @@ A random number will be generated every 5 seconds.*/
 var rndmNmbr = 0;
 
 function rndm(){
-	rndmNmbr = Math.floor(Math.random()*36);
+	rndmNmbr = Math.floor(Math.random()*37);
 }
 
 function createDiv(){
@@ -43,15 +43,12 @@ function createDiv(){
 
 var ignition = false;
 
-var startStop = setInterval(createDiv, 5000);
-
-
 function startSwitch(){
 	if(ignition === false){
 		ignition = true;
 		console.log('Start Status:', ignition);
 		createDiv();
-		return startStop;
+		startStop = setInterval(createDiv, 5000);
 	}else{
 		ignition = false;
 		console.log('Start Status:', ignition);
