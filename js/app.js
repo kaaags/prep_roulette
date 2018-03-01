@@ -43,19 +43,19 @@ function createDiv(){
 
 var ignition = false;
 
-function startStop(){
-	setInterval(createDiv(), 5000);
-}
+var startStop = setInterval(createDiv, 5000);
+
 
 function startSwitch(){
 	if(ignition === false){
 		ignition = true;
 		console.log('Start Status:', ignition);
-		startStop();
+		createDiv();
+		return startStop;
 	}else{
 		ignition = false;
 		console.log('Start Status:', ignition);
-		clearInterval();
+		clearInterval(startStop);
 	}
 }
 
