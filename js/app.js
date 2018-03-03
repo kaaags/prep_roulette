@@ -16,6 +16,7 @@ function rndm(){
 }
 
 function createDiv(){
+	rndm();
 	var storedNumber = rndmNmbr;
 	if(storedNumber===0){
 		var div = document.createElement('div');
